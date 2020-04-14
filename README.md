@@ -5,7 +5,7 @@ Custom Youtube search and videoplayer made entirely on Python Web Framework Djan
 
 1. It shows top 12 youtube video result of your search. 
 
-2. On clicking at any video, it opens a new page containing the embedded video and a button to redirect to youtube page of the same video,
+2. On clicking at any video, it opens a new page containing the embedded video and a button to redirect to youtube page of the same video.
 
 ##### Features:
 
