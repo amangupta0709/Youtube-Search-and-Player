@@ -7,7 +7,7 @@ Custom Youtube search and videoplayer made entirely on Python Web Framework Djan
 
 2. On clicking at any video, it opens a new page containing the embedded video and a button to redirect to youtube page of the same video.
 
-##### Features:
+### Features:
 
 Shows title, total no. of views, thumbnail and the video uploaded date.
 
