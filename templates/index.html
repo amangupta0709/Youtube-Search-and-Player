@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <style>
+            .img {
+                position: relative;
+              }
+              
+              /* Bottom right text */
+              .text-block {
+                position: absolute;
+                bottom: 6px;
+                right: 6px;
+                background-color: black;
+                color: white;
+                padding-left: 5px;
+                padding-right: 5px;
+              }
+        </style>
+
+        <title>Youtube Search</title>
+    </head>
+    <body>
+
+        <!-- Page Content -->
+        <div class="container">
+            <section class="jumbotron text-center" style="background-color: white;">
+            <form method = "POST">
+                {% csrf_token %}
+                <div class="container">
+                    <h1 class="jumbotron-heading">YouTube Search</h1>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" name="searchbar" placeholder="Click here to type" {% for message in messages %}{% if message %}style="border-color: red;"{%endif%}{%endfor%}>
+                    </div>
+                    {% for message in messages %}
+                      <small style="color: red;">{{ message }}</small>
+                    {% endfor %}
+                    <p>
+                        <button type="submit" class="btn btn-primary my-2" style="width: 130px;">Search</button>
+                    </p>
+                  </div>
+            </form>
+            </section>
+
+            <div class="row">
+                {% for video in videos %}
+                <a href="{% url 'player' video.id %}" style="color: inherit; text-decoration: inherit;" class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="img">
+                            <img class="card-img-top" src="{{ video.thumbnail }}" alt="">
+                            <div class="text-block"> {{ video.duration }} </div>
+                        </div>
+                        
+                        <div class="card-body">
+                        <h4 class="card-title"> {{ video.title}} </h4>
+                        </div>
+                        <div class="card-footer">
+                        <small class="text-muted"> {{ video.views }} </small>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            
+            </div>
+            <!-- /.row -->
+
+
+        </div>
+        <!-- /.container -->
+
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Developed By Aman Gupta</p>
+            <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+        </div>
+        <!-- /.container -->
+        </footer>
+
+        
+    </body>
+</html>

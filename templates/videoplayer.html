@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+       
+
+        <title>Youtube Player</title>
+    </head>
+    <body>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="card" style="width: 18rem;"></div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{videos.id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="card-body">
+                <h3 class="card-title">{{videos.title}}</h5>
+                <p class="card-text"> &#x1F550; {{ videos.date }} </p>
+                <a href="https://www.youtube.com/watch?v={{videos.id}}" class="btn btn-primary">Click here to Play on Youtube</a>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Developed By Aman Gupta</p>
+            <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+        </div>
+        <!-- /.container -->
+        </footer>
+
+        
+    </body>
+</html>
