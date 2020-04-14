@@ -36,7 +36,7 @@ pip freeze > requirements.txt
 
 Run the following command to sync your virtualenv
 ```bash
-pip-sync`
+pip-sync
 ```
  This will install/upgrade/uninstall everything necessary to match the requirements.txt contents.
 
