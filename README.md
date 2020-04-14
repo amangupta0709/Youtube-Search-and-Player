@@ -1,5 +1,6 @@
 # Youtube-Search-and-Player
-Custom Youtube search and videoplayer made entirely on Python Web Framework Django. Templates made by using Bootstrap 4.
+Custom Youtube search and videoplayer made entirely on Python Web Framework Django.Data collected by using YouTube Data API v3.
+Templates made on Bootstrap 4.
 
 ## How it works
 
