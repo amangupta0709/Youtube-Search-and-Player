@@ -18,8 +18,8 @@ Shows title, total no. of views, thumbnail and the video uploaded date.
 
 ##### Create and activate a virtualenv:
 
-1. `virtualenv venv`. This will a create a vitual environment called "venv" that helps with controlling dependencies.
-2. `source venv/bin/activate`. 
+1. `virtualenv venv`. This will a create a vitual environment called "venv" that helps with controlling dependencies.(For windows run `mkvirtualenv venv`)
+2. `source venv/bin/activate`.( For windows run `workon venv` )
 
 
 ##### Install dependencies:
@@ -40,6 +40,14 @@ Run the following command to sync your virtualenv
 pip-sync
 ```
  This will install/upgrade/uninstall everything necessary to match the requirements.txt contents.
+
+##### Set Your API key 
+
+Open the Youtube_Search/settings.py file and change YourAPIKey with 'Google developer genereated API of Youtube Data API v3' here:
+
+```bash
+YOUTUBE_API_KEY = 'YourAPIKey' 
+```
 
 ##### Run the server:
 ```bash
