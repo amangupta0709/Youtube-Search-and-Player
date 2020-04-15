@@ -120,4 +120,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-YOUTUBE_API_KEY = ''
+YOUTUBE_API_KEY = 'YourAPIKey'
